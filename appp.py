@@ -10,8 +10,8 @@ Bedrooms=st.number_input("please enter no of bedrooms")
 
 model=joblib.load("mul_lin_app.pkl")
 
-if st.button('predict')
-    features=np.array([[House_size,Bedrooms]])
+if st.button('predict'):
+    features= np.array([[House_size,Bedrooms]])
     output=model.predict([[House_size,Bedrooms]])
     st.write(f"the Price of the house is {output[0]}")
 
