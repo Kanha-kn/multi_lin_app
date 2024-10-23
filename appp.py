@@ -10,6 +10,6 @@ Bedrooms=st.number_input("please enter no of bedrooms")
 model1=joblib.load("mul_lin_app.pkl")
 
 if st.button('predict'):
-    output=model.predict([[House_size,Bedrooms]])
+    output=model1.predict([[House_size,Bedrooms]])
     st.write(f"the Price of the house is {output[0]}")
 
